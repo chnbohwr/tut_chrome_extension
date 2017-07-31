@@ -1,5 +1,11 @@
 if (!extensionLineComments) {
-  var extensionLineComments = document.querySelector('.comment_list').children;
+  var extensionLineComments = Array.from(document.querySelector('.comment_list').children);
+  extensionLineComments = extensionLineComments.filter((item, index) => {
+    var userLink = item.querySelector('.nickname a').getAttribute('href');
+    return extensionLineComments.findIndex((item2) => {
+      return userLink === item2.querySelector('.nickname a').getAttribute('href');
+    }) === index;
+  });
   var extensionLineIndexMap = {};
 }
 if (Object.keys(extensionLineIndexMap).length === extensionLineComments.length) {
