@@ -1,14 +1,40 @@
 <!doctype html>
-<html xmlns="http://www.w3.org/1999/xhtml" style="min-width:300px;">
-  <head>
-    <title>line 留言抽獎</title>
-    <meta charset="UTF-8">
-    <script src="jquery-3.2.1.min.js"></script>
-    
-  </head>
-  <body>
-    <h1>line 留言抽獎</h1>
-    <button id="checkPage">點我抽一名</button>
-  </body>
-  <script src="main.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>line 留言抽獎</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="pure-min.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body id="body">
+  <div class="container">
+    <div class="title">
+      <span>LINE</span>
+      <span>抽獎系統</span>
+    </div>
+    <div class="content pure-form pure-form-stacked">
+      <div class="form-item">
+
+        <label for="tags">Tag人數</label>
+        <input id="tags" type="number" value="0" min="0" />
+        <span class="pure-form-message">最少要標記幾個朋友才會被納入抽獎範圍內</span>
+      </div>
+      <div class="form-item">
+        <label for="keyword">關鍵字</label>
+        <input id="keyword" type="text"/>
+        <span class="pure-form-message">包含輸入的關鍵字才會被納入抽獎範圍內</span>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="pure-button pure-button-primary" id="lottery">點我抽一名</button>
+      <button class="pure-button" id="reset">清空</button>
+    </div>
+  </div>
+</body>
+<script src="main.js"></script>
+
 </html>
